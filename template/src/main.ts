@@ -1,13 +1,8 @@
-import { Triggers, Status } from 'client-rpa-orchestrator-ts';
+import { AbstractMain } from "client-rpa-orchestrator-ts";
 
-Status.publish();
-
-const triggers = new Triggers();
-
-triggers.start(async () => {
-    
-})
-
-triggers.stop(async () => {
-    
-})
+export class Main extends AbstractMain
+{
+    async start(): Promise<void> {
+        console.log("START")
+    }
+}
