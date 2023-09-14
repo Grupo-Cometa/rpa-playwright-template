@@ -1,6 +1,6 @@
-import { AbstractMain } from "client-rpa-orchestrator-ts";
+import { InterfaceMain } from "client-rpa-orchestrator-ts";
 
-export class Main extends AbstractMain
+export class Main implements InterfaceMain
 {
     async start(): Promise<void> {
         console.log("START")

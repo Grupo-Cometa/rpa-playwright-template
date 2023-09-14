@@ -5,9 +5,10 @@
   "main": "dist/main.js",
   "scripts": {
     "build": "tsc",
-    "main": "node ./dist/main.js",
     "start": "node ./dist/start.js",
-    "dev": "ts-node src/main.ts"
+    "dev": "ts-node src/start.ts",
+    "bootstrap": "node ./dist/bootstrap",
+    "bootstrap-dev": "ts-node ./bootstrap"
   },
   "author": "",
   "license": "ISC",
