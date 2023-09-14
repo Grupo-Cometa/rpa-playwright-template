@@ -1,3 +1,3 @@
 #!/bin/bash
 
-npm run main
+npm run bootstrap
