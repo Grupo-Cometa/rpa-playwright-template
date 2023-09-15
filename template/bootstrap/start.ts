@@ -7,7 +7,7 @@ const args = process.argv;
 (async () => {
     if (process.env.DEBUG == 'true') return await (new Main).start()
 
-    if (args.length < 3) throw "Obrigatoria a passagem do argumento {sheduleid}";
+    if (args.length < 3) throw "Obrigatória a passagem do argumento {sheduleid}";
     const start = new Start(new Main)
-    await start.executionShedule(parseInt(args[2]))
+    await start.executionShedule(args[2])
 })()
