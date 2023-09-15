@@ -5,7 +5,8 @@
   "main": "dist/main.js",
   "scripts": {
     "build": "tsc",
-    "start": "node ./dist/start.js",
+    "start": "node ./dist/bootstrap/start.js",
+    "start-dev": "ts-node ./bootstrap/start.ts",
     "dev": "ts-node src/start.ts",
     "bootstrap": "node ./dist/bootstrap",
     "bootstrap-dev": "ts-node ./bootstrap"
@@ -18,7 +19,7 @@
   },
   "dependencies": {
     "playwright": "^1.37.1",
-    "client-rpa-orchestrator-ts": "^1.0.10",
+    "client-rpa-orchestrator-ts": "^1.0.15",
     "fs-extra": "^10.0.0",
     "dotenv": "^16.3.1"
   }
