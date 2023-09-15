@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "playwright": "^1.37.1",
-    "client-rpa-orchestrator-ts": "^1.0.15",
+    "client-rpa-orchestrator-ts": "^1.0.16",
     "fs-extra": "^10.0.0",
     "dotenv": "^16.3.1"
   }

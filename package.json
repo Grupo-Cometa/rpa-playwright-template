@@ -9,7 +9,7 @@
     "create-rpa": "./cli.js"
   },
   "dependencies": {
-    "client-rpa-orchestrator-ts": "1.0.15",
+    "client-rpa-orchestrator-ts": "^1.0.16",
     "fs-extra": "^10.0.0"
   },
   "devDependencies": {
