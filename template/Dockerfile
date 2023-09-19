@@ -25,6 +25,8 @@ RUN npm ci
 
 RUN npm run build
 
+RUN npx playwright install
+
 RUN chmod 777 /var/www/start.sh
 
 ENTRYPOINT [ "/var/www/start.sh" ]
