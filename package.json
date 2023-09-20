@@ -1,6 +1,6 @@
 {
   "name": "rpa-playwright-template",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "",
   "main": "cli.js",
   "author": "Grupo Cometa",
@@ -9,7 +9,7 @@
     "create-rpa": "./cli.js"
   },
   "dependencies": {
-    "client-rpa-orchestrator-ts": "^1.0.19",
+    "client-rpa-orchestrator-ts": "^1.0.20",
     "fs-extra": "^10.0.0"
   },
   "devDependencies": {
