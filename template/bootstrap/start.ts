@@ -9,5 +9,5 @@ const args = process.argv;
 
     if (args.length < 3) throw "Obrigatória a passagem do argumento {sheduleid}";
     const start = new Start(new Main)
-    await start.executionShedule(args[2])
+    await start.execute(args[2])
 })()
