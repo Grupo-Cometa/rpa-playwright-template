@@ -1,7 +1,8 @@
 FROM node:18.17.1
 
-COPY ./  /var/www
 WORKDIR /var/www
+
+COPY . .
 
 RUN apt-get update && apt-get install -y \
     cron\
@@ -19,7 +20,12 @@ RUN apt-get update && apt-get install -y \
     libxfixes3\                                  
     libxrandr2\                                  
     libgbm1\                                     
-    libasound2 
+    libasound2\
+    tzdata 
+
+RUN apt-get clean
+
+ENV TZ=America/Cuiaba
 
 RUN npm ci
 
