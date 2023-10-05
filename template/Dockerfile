@@ -4,6 +4,8 @@ WORKDIR /var/www
 
 COPY . .
 
+ENV TZ=America/Cuiaba
+
 RUN apt-get update && apt-get install -y \
     cron\
     libnss3\                      
@@ -21,11 +23,8 @@ RUN apt-get update && apt-get install -y \
     libxrandr2\                                  
     libgbm1\                                     
     libasound2\
-    tzdata 
-
-RUN apt-get clean
-
-ENV TZ=America/Cuiaba
+    tzdata \
+    && apt-get clean
 
 RUN npm ci
 
@@ -33,6 +32,8 @@ RUN npm run build
 
 RUN npx playwright install
 
+RUN touch /var/log/cron.log
 RUN chmod 777 /var/www/start.sh
+RUN chmod 777 /var/log/cron.log
 
 ENTRYPOINT [ "/var/www/start.sh" ]
