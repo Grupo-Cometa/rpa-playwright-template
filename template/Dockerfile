@@ -26,11 +26,11 @@ RUN apt-get update && apt-get install -y \
     tzdata \
     && apt-get clean
 
-RUN npm ci
+RUN npm install
 
 RUN npm run build
 
-RUN npx playwright install
+RUN npx playwright install chromium
 
 RUN touch /var/log/cron.log
 RUN chmod 777 /var/www/start.sh
