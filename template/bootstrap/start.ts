@@ -1,8 +1,13 @@
 import { Start } from "client-rpa-orchestrator-ts"
 import { Main } from "../src/Main";
-import { join } from "path";
+import { platform } from "os";
+import { join } from 'path';
 
-require('dotenv').config({ path: join(process.cwd(), '.env') });
+let path = join(process.cwd(), '.env');
+
+if(platform() == 'linux')  path = '/var/www/.env';
+
+require('dotenv').config({ path: path });
 
 const args = process.argv;
 
