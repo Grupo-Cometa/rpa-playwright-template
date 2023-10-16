@@ -6,7 +6,8 @@ COPY . .
 
 ENV TZ=America/Cuiaba
 
-RUN apt-get update && apt-get install -y \
+RUN echo $TZ > /etc/timezone && \
+    apt-get update && apt-get install -y \
     cron\
     libnss3\                      
     libnspr4\                                    
@@ -24,7 +25,11 @@ RUN apt-get update && apt-get install -y \
     libgbm1\                                     
     libasound2\
     tzdata \
-    && apt-get clean
+    && \
+    rm /etc/localtime && \
+    ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
+    dpkg-reconfigure -f noninteractive tzdata && \
+    apt-get clean
 
 RUN npm install
 
