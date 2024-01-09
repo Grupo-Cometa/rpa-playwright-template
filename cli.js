@@ -36,7 +36,6 @@ test-results/
 playwright-report/
 playwright/.cache/
 .env
-.vscode/
 dist/
 storage/
 `;
