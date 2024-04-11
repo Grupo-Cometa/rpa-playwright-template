@@ -41,4 +41,4 @@ RUN touch /var/log/cron.log
 RUN chmod 777 /var/www/start.sh
 RUN chmod 777 /var/log/cron.log
 
-ENTRYPOINT [ "/var/www/start.sh" ]
+CMD bash -c "cron && npm run bootstrap"
