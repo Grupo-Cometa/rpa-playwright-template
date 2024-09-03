@@ -14,12 +14,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^22.5.2",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "playwright": "^1.37.1",
-    "client-rpa-orchestrator-ts": "^1.2.7",
-    "dotenv": "^16.3.1"
+    "client-rpa-orchestrator-ts": "^1.2.15",
+    "dotenv": "^16.3.1",
+    "playwright": "^1.37.1"
   }
 }

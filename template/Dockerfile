@@ -1,4 +1,4 @@
-FROM node:18.17.1
+FROM node:lts
 
 WORKDIR /var/www
 
@@ -38,7 +38,6 @@ RUN npm run build
 RUN npx playwright install chromium
 
 RUN touch /var/log/cron.log
-RUN chmod 777 /var/www/start.sh
 RUN chmod 777 /var/log/cron.log
 
 CMD bash -c "cron && npm run bootstrap"
