@@ -32,12 +32,8 @@ if (projectName || currentDirectoryName !== "template") {
 
 const gitIgnoreContent = `
 node_modules/
-test-results/
-playwright-report/
-playwright/.cache/
 .env
 dist/
-storage/
 `;
 
 fs.writeFileSync(path.join(projectPath, '.gitignore'), gitIgnoreContent);

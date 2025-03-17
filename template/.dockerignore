@@ -1,0 +1,12 @@
+node_modules/
+.gitignore
+.git/
+README.md
+.dockerignore
+Dockerfile
+.env.example
+.vscode/
+docs/
+k8s/
+tests/
+.gitlab-ci.yml
