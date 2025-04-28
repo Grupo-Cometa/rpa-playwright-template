@@ -1,8 +1,10 @@
-import { platform } from "os";
 import { join } from 'path';
+import { existsSync } from 'fs';
 
 let path = join(process.cwd(), '.env');
 
-if(platform() == 'linux')  path = '/var/www/.env';
+if (!existsSync(path)) {
+  path = '/var/www/.env';
+}
 
-require('dotenv').config({ path: path });
+require('dotenv').config({ path });
