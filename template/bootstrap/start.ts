@@ -1,6 +1,6 @@
-import '../src/helpers/env';
+import '../src/helpers/env.helper';
 import { Start } from "client-rpa-orchestrator-ts";
-import { Main } from "../src/Main";
+import { Main } from "../src/main";
 
 const args = process.argv;
 
