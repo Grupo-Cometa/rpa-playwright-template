@@ -1,7 +1,7 @@
 import { AutomationContext } from './contexts/automation.context';
 import handlerChain from './handlers/chain.bootstrap';
 import { Log } from 'client-rpa-orchestrator-ts';
-import { launchBrowser } from 'src/services/browser.service';
+import { launchBrowser } from '../services/browser.service';
 
 export default class App {
     static async run(): Promise<void> {
